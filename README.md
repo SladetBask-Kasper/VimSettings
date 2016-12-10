@@ -1,2 +1,2 @@
 # VimSettings
-My Vim (so i can transfer to vms easily)
+My Vim Settings (so i can transfer to vms easily)
