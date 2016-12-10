@@ -1,17 +1,18 @@
 #! /bin/bash
+cd
 
 echo "STARTING UPDATES"
-sudo apt-get update > ktmp.log
-sudo apt-get upgrade > ktmp.log
+sudo apt-get update
+sudo apt-get upgrade
 
 
 cd
 echo "STARTING INSTALL FOR NECCECERRY TOOLS"
-sudo apt-get install git wget gdebi openssh-server vim > ktmp.log
+sudo apt-get install git wget gdebi openssh-server vim
 
 echo "STARTING INSTALL FOR OTHER APPLICATIONS"
 sudo apt-get install cmatrix gcc g++ clang perl ruby python python-pip python3 python3-pip htop firefox konsole terminator xterm nano gedit leafpad gnome-terminal > ktmp.log
-sudo pip3 install slowloris > ktmp.log
+sudo pip3 install slowloris
 
 ## The Following does not work propoly.
 
@@ -24,4 +25,3 @@ sudo pip3 install slowloris > ktmp.log
 #mv k.vimrc ~/.vimrc
 cd
 
-rm ktmp.log
