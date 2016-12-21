@@ -11,7 +11,7 @@ echo "STARTING INSTALL FOR NECCECERRY TOOLS"
 sudo apt-get install git wget gdebi openssh-server vim
 
 echo "STARTING INSTALL FOR OTHER APPLICATIONS"
-sudo apt-get install cmatrix gcc g++ clang perl ruby python python-pip python3 python3-pip htop firefox konsole terminator xterm nano gedit leafpad gnome-terminal > ktmp.log
+sudo apt-get install cmatrix gcc g++ gfortran clang perl ruby python python-pip python3 python3-pip htop firefox konsole terminator xterm nano gedit leafpad gnome-terminal
 sudo pip3 install slowloris
 
 ## The Following does not work propoly.
