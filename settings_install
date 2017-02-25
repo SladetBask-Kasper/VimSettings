@@ -30,12 +30,14 @@ mkdir random
 
 ## The Following does not work propoly.
 
-#echo "STARTING INSTALL FOR VIM SETTINGS"
+echo "STARTING INSTALL FOR VIM SETTINGS"
+cd Downloads
+echo "gettin' vim settings"
+git clone https://github.com/SladetBask-Kasper/VimSettings.git
+cd VimSettings
+mv vim.vim ~/.vim
+mv k.vimrc ~/.vimrc
+cd ..
 #cd Downloads
-#echo "gettin vim settings"
-#git clone https://github.com/SladetBask-Kasper/VimSettings.git > ktmp.log
-#cd VimSettings
-#mv vim.vim ~/.vim
-#mv k.vimrc ~/.vimrc
-cd
+rm -rf VimSettings
 
