@@ -30,6 +30,7 @@ mkdir random
 
 ## The Following does not work propoly.
 
+cd
 echo "STARTING INSTALL FOR VIM SETTINGS"
 cd Downloads
 echo "gettin' vim settings"
