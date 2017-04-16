@@ -1,4 +1,9 @@
 #! /bin/bash
+
+# After This follow the folowing tutorials
+# https://github.com/vim-syntastic/syntastic/blob/master/README.markdown#installation
+# https://github.com/kien/ctrlp.vim
+
 cd
 
 echo "STARTING UPDATES"
@@ -41,4 +46,28 @@ mv k.vimrc ~/.vimrc
 cd ..
 #cd Downloads
 rm -rf VimSettings
+
+## Added in april
+
+cd
+mkdir -p ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd
+echo "" >> .vimrc
+echo "execute pathogen#infect()" >> .vimrc
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
+
+cd
+
+echo "set statusline+=%#warningmsg#" >> .vimrc
+echo "set statusline+=%{SyntasticStatuslineFlag()}" >> .vimrc
+echo "set statusline+=%*" >> .vimrc
+
+echo "let g:syntastic_always_populate_loc_list = 1" >> .vimrc
+echo "let g:syntastic_auto_loc_list = 1" >> .vimrc
+echo "let g:syntastic_check_on_open = 1" >> .vimrc
+echo "let g:syntastic_check_on_wq = 0" >> .vimrc
+
 
