@@ -1,7 +1,6 @@
 #! /bin/bash
 
 # https://github.com/vim-syntastic/syntastic/blob/master/README.markdown#installation
-# https://github.com/kien/ctrlp.vim # <--- Not used!
 
 cd
 
