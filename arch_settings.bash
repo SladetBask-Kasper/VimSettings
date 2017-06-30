@@ -1,0 +1,78 @@
+#! /bin/bash
+
+# https://github.com/vim-syntastic/syntastic/blob/master/README.markdown#installation
+
+cd
+
+echo "STARTING UPDATES"
+# I think this is like a apt update
+sudo pacman -Syy
+# I think this is like a apt upgrade
+sudo pacman -Su
+
+cd
+echo "STARTING INSTALL FOR NECCECERRY TOOLS"
+sudo pacman -S git vim curl
+
+### ------------------------------------------------------------ // Start
+
+echo "STARTING INSTALL FOR OTHER APPLICATIONS"
+sudo pacman -S cmatrix gcc perl ruby python python3 python-pip htop gedit leafpad steam cowsay 
+#sudo apt-get install cmatrix gcc g++ gfortran perl ruby python python-pip python3 python3-pip htop nano gedit leafpad gnome-terminal steam cowsay# Apt
+
+### ------------------------------------------------------------
+
+echo ""
+echo "SETTING UP PROGRAMMING FOLDERS..."
+cd ~
+mkdir programming
+cd programming
+mkdir cpp
+mkdir c
+mkdir perl
+mkdir python
+mkdir lua
+mkdir ruby
+mkdir frotran
+mkdir random
+mkdir qt
+mkdir gtk
+
+### ------------------------------------------------------------ // End
+
+cd
+echo "STARTING INSTALL FOR VIM SETTINGS"
+cd Downloads
+echo "gettin' vim settings"
+git clone https://github.com/SladetBask-Kasper/VimSettings.git
+cd VimSettings
+mv vim.vim ~/.vim
+mv k.vimrc ~/.vimrc
+cd ..
+rm -rf VimSettings
+
+## The Following may not work propoly. (But it should)
+##
+## syntastic Install script
+##
+
+cd
+mkdir -p ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cd
+echo "" >> .vimrc
+echo "execute pathogen#infect()" >> .vimrc
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
+
+cd
+
+echo "set statusline+=%#warningmsg#" >> .vimrc
+echo "set statusline+=%{SyntasticStatuslineFlag()}" >> .vimrc
+echo "set statusline+=%*" >> .vimrc
+
+echo "let g:syntastic_always_populate_loc_list = 1" >> .vimrc
+echo "let g:syntastic_auto_loc_list = 1" >> .vimrc
+echo "let g:syntastic_check_on_open = 1" >> .vimrc
+echo "let g:syntastic_check_on_wq = 0" >> .vimrc
