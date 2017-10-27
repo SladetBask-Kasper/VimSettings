@@ -33,6 +33,8 @@ mkdir python
 mkdir lua
 mkdir ruby
 mkdir frotran
+mkdir javascript
+mkdir websites
 mkdir random
 mkdir qt
 mkdir gtk
@@ -50,7 +52,6 @@ mv k.vimrc ~/.vimrc
 cd ..
 rm -rf VimSettings
 
-## The Following may not work propoly.
 ##
 ## syntastic Install script
 ##
@@ -63,7 +64,6 @@ echo "" >> .vimrc
 echo "execute pathogen#infect()" >> .vimrc
 cd ~/.vim/bundle && \
 git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
-
 
 cd
 
