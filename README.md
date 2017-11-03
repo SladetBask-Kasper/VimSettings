@@ -2,6 +2,10 @@
 My Vim Settings (so i can transfer to vms easily)
 https://sladetbask-kasper.github.io/VimSettings/
 
+# How to install?
+chmod +x installer.sh
+./installer.sh
+
 # Features
 * error correnction when saving file.
 * line number shown on side.
