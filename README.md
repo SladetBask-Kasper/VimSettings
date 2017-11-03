@@ -6,3 +6,6 @@ https://sladetbask-kasper.github.io/VimSettings/
 * error correnction when saving file.
 * line number shown on side.
 * giving suggestions and auto correcting code
+
+# Pictures
+![alt text](https://raw.githubusercontent.com/SladetBask-Kasper/VimSettings/master/vimex.JPG)
