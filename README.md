@@ -3,7 +3,7 @@ My Vim Settings (so i can transfer to vms easily)
 https://sladetbask-kasper.github.io/VimSettings/
 
 # How to install?
-chmod +x installer.sh
+chmod +x installer.sh \n
 ./installer.sh
 
 # Features
