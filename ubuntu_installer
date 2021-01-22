@@ -5,18 +5,18 @@
 cd
 
 echo "STARTING UPDATES"
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 
 cd
 echo "STARTING INSTALL FOR NECCECERRY TOOLS"
-sudo apt-get install git vim curl
+sudo apt-get install -y git vim curl
 
 ### ------------------------------------------------------------ // Start
 
 echo "STARTING INSTALL FOR OTHER APPLICATIONS"
-sudo apt-get install cmatrix gcc g++ gfortran perl ruby python3-pip htop nano python3-tk cowsay
+sudo apt-get install -y cmatrix gcc g++ gfortran perl ruby python3-pip htop nano python3-tk cowsay
 
 cd
 echo "STARTING INSTALL FOR VIM SETTINGS"
